@@ -42,7 +42,7 @@
                                 <div  input class="button" value="c" onclick="clean()">C</div>
                             </div>
                             <div>
-                                <button type="submit" class="submit-btn">Submit</button>
+                                <button id="submitBtn"type="submit" class="submit-btn">Submit</button>
                                 <p class="action-left">3 try left</p>
                             </div>
                     </div>
@@ -82,6 +82,30 @@ function back(){
     let exp = result.value
     result.value = exp.substring(0, exp.length - 1)
 }
+
+
+var submitBtn=document.getElementById("submitBtn")
+ submitBtn.addEventListener("click", function (){
+var userPin=document.getElementById("result").value
+ var pinButton=document.getElementById("input_value").value;
+
+if (userPin===pinButton){
+   
+    alert("✅ Pin Matched... Secret door is opening for you");
+}else{
+    
+    alert("❌ Pin Didn't Match, Please try again")
+}
+
+
+
+
+ })
+ 
+
+
+
+
 
     </script>
 </body>
